@@ -2,8 +2,14 @@ import Icon from "../components/Icon";
 import TextButton from "../components/TextButton";
 import InputText from "../components/InputText";
 import colors from "../styles/colors";
+import { isMobile as nextMobile } from "react-device-detect";
+import React, { useState, useEffect } from "react";
 
-export default function Contact({ isMobile }) {
+export default function Contact() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    setIsMobile(nextMobile);
+  }, []);
   return (
     <div
       style={{
@@ -124,7 +130,6 @@ export default function Contact({ isMobile }) {
               <InputText placeholder="Telefone" />
               <InputText placeholder="E-mail" />
 
-              <InputText placeholder="Assunto" />
               <InputText type="textarea" placeholder="Conteúdo" />
               <TextButton
                 label="enviar"
