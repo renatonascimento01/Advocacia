@@ -1,11 +1,21 @@
 import React from "react";
 import colors from "../styles/colors";
 import Icon from "./Icon";
+import { useRouter } from "next/router";
 
 export default function Footer() {
   return (
-    <footer style={{ height: 80, marginTop: 20 }}>
-      <hr />
+    <footer
+      style={{
+        height: 80,
+        marginTop: 20,
+        backgroundColor: colors.primary,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <div
         style={{
           display: "flex",
@@ -17,7 +27,7 @@ export default function Footer() {
         <LinkFooter
           icon="copyright"
           label="Rekemat LTDA"
-          url="http://empresadorenato.com.br/"
+          url="https://www.linkedin.com/in/renato-borges-nascimento-7ab60b102/"
         />
         <div style={{ display: "flex", flexDirection: "row" }}>
           <LinkFooter
@@ -45,6 +55,7 @@ function LinkFooter({
   label: string;
   url: string;
 }) {
+  const router = useRouter();
   return (
     <div
       style={{
@@ -52,25 +63,26 @@ function LinkFooter({
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "row",
-        margin: 5,
+        marginLeft: 5,
+        marginRight: 5,
         cursor: "pointer",
       }}
       onClick={() => {
-        alert(url);
+        router.push(url);
       }}
     >
       <Icon
         name={icon}
-        color={icon == "copyright" ? colors.primary : colors.secondary}
+        color={colors.white}
         width={icon == "copyright" ? 18 : 14}
         height={icon == "copyright" ? 18 : 14}
       />
       <span
         style={{
-          color: icon == "copyright" ? colors.primary : colors.secondary,
+          color: colors.white,
           fontSize: icon == "copyright" ? 18 : 14,
           fontWeight: "bold",
-          marginLeft: 3,
+          marginLeft: 2,
         }}
       >
         {label}

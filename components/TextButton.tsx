@@ -34,11 +34,8 @@ export default function TextButton({
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: isMouseHover
-            ? "#FFFFFF"
-            : backgroundColor
-            ? backgroundColor
-            : colors.primary,
+          backgroundColor: colors.primary,
+          opacity: isMouseHover ? 0.9 : 1,
           cursor: "pointer",
           transition: "background-color 300ms linear",
         }}
@@ -49,11 +46,7 @@ export default function TextButton({
         <span
           style={{
             fontSize: fontSize ? fontSize : 15,
-            color: isMouseHover
-              ? backgroundColor
-                ? backgroundColor
-                : colors.primary
-              : "#FFFFFF",
+            color: colors.white,
             fontWeight: "bold",
           }}
         >

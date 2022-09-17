@@ -8,7 +8,7 @@ export default function NavHeader() {
       style={{
         width: "100%",
         height: "80px",
-        backgroundColor: "white",
+        backgroundColor: colors.primary,
         boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
         display: "flex",
         flexDirection: "row",
@@ -18,12 +18,12 @@ export default function NavHeader() {
       }}
     >
       <div>
-        <span>ADVS_LOGO</span>
+        <img src="/tmplogo.png" width={60} height={60} />
       </div>
       <div>
         <NaveHeaderItem title="Home" url="/" />
-        <NaveHeaderItem title="Área de atuação" url="/renato" />
-        <NaveHeaderItem title="Sócios" url="/" />
+        <NaveHeaderItem title="Área de atuação" url="/areas" />
+        <NaveHeaderItem title="Sócios" url="/socios" />
         <NaveHeaderItem title="Contato" url="/contato" />
       </div>
     </header>
@@ -37,8 +37,8 @@ function NaveHeaderItem({ title, url }: { title: string; url: string }) {
     <a
       href={url}
       style={{
-        color: !isMouseOver ? colors.primary : colors.terceira,
-        margin: "0px 10px",
+        color: !isMouseOver ? colors.white : colors.terceira,
+        margin: "0px 20px",
         textDecoration: router.pathname === url ? "underline" : undefined,
         textDecorationColor:
           router.pathname === url ? colors.terceira : undefined,
