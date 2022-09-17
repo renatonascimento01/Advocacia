@@ -1,4 +1,6 @@
 import Cart from "./svgs/cart.svg";
+import Linkedin from "./svgs/linkedin.svg";
+import Copyright from "./svgs/copyright.svg";
 
 interface IconProps {
   name: string;
@@ -28,6 +30,12 @@ export default function Icon({
       }}
     >
       {name === "cart" && <Cart fill={color} width={width} height={height} />}
+      {name === "copyright" && (
+        <Copyright fill={color} width={width} height={height} />
+      )}
+      {name === "linkedin" && (
+        <Linkedin fill={color} width={width} height={height} />
+      )}
     </div>
   );
 }

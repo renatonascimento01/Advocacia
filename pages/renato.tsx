@@ -1,9 +1,9 @@
 import React from "react";
 
 export default function Renato() {
-  return(
+  return (
     <div>
       <span>renato</span>
     </div>
-  )
+  );
 }
