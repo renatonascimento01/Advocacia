@@ -1,4 +1,4 @@
-import Cart from "./svgs/cart.svg";
+import Collapse from "./svgs/align-justify.svg";
 import Linkedin from "./svgs/linkedin.svg";
 import Copyright from "./svgs/copyright.svg";
 
@@ -29,7 +29,9 @@ export default function Icon({
         alignItems: "center",
       }}
     >
-      {name === "cart" && <Cart fill={color} width={width} height={height} />}
+      {name === "collapse" && (
+        <Collapse fill={color} width={width} height={height} />
+      )}
       {name === "copyright" && (
         <Copyright fill={color} width={width} height={height} />
       )}
