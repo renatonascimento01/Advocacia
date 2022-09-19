@@ -8,25 +8,28 @@ export default function SocialMediaBallIcon({
   color,
   bgColor,
   size,
+  style,
 }: {
   icon: "instagram" | "facebook" | "linkedin";
   color: string;
   bgColor: string;
   size: number;
+  style?: object;
 }) {
   const [isMouseOver, setIsMouseOver] = useState(false);
   return (
-    <Link href="https://facebook.com/tiagoduuarte">
+    <Link href="https://facebook.com/">
       <div
         style={{
           width: size * 2,
           height: size * 2,
-          borderRadius: size / 2,
+          borderRadius: 50,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           backgroundColor: bgColor,
           cursor: "pointer",
+          ...style,
         }}
         onMouseEnter={() => {
           setIsMouseOver(true);

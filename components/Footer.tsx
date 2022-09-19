@@ -8,6 +8,7 @@ export default function Footer() {
   return (
     <footer
       style={{
+        width: "100%",
         height: 250,
         backgroundColor: colors.primary,
         display: "flex",
@@ -16,6 +17,7 @@ export default function Footer() {
         justifyContent: "center",
       }}
     >
+      <div></div>
       <div
         style={{
           display: "flex",
@@ -114,7 +116,7 @@ export default function Footer() {
           label="Rekemat LTDA"
           url="https://www.linkedin.com/in/renato-borges-nascimento-7ab60b102/"
         />
-        <div style={{ display: "flex", flexDirection: "row" }}>
+        <div style={{ display: "flex", flexDirection: "row", marginTop: 3 }}>
           <LinkFooter
             icon="boxlinkedin"
             label="Renato Nascimento"
@@ -159,14 +161,14 @@ function LinkFooter({
       <Icon
         name={icon}
         color={colors.white}
-        width={icon == "copyright" ? 14 : 12}
-        height={icon == "copyright" ? 14 : 12}
+        width={icon == "copyright" ? 12 : 10}
+        height={icon == "copyright" ? 12 : 10}
       />
       <span
         style={{
           color: colors.white,
-          fontSize: icon == "copyright" ? 14 : 12,
-          fontWeight: "bold",
+          fontSize: icon == "copyright" ? 12 : 10,
+          textDecoration: "underline",
           marginLeft: 2,
         }}
       >

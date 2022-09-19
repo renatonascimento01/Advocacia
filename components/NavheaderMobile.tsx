@@ -3,6 +3,7 @@ import colors from "../styles/colors";
 import Icon from "./Icon";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import SocialMediaBallIcon from "./SocialMediaBallIcon";
 
 function FullBackgroundBlur({ onClick }: { onClick: Function }) {
   return (
@@ -46,31 +47,63 @@ function ModalnavHeaderUncollapsed({
           style={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
+            height: "90%",
+            justifyContent: "space-around",
           }}
         >
-          <Link href="/">
-            <img
-              src="/tmplogo.png"
-              width={120}
-              height={120}
-              style={{ marginTop: 50, marginBottom: 20 }}
-            />
-          </Link>
-          <NaveHeaderItem title="Home" url="/" />
-          <NaveHeaderItem title="Área de atuação" url="/areas" />
-          <NaveHeaderItem title="Sócios" url="/socios" />
-          <NaveHeaderItem title="Contato" url="/contato" />
-          {/* <div
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginTop: 25,
+            }}
+          >
+            <Link href="/">
+              <img src="/tmplogo.png" width={120} height={120} />
+            </Link>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <NaveHeaderItem title="Home" url="/" />
+            <NaveHeaderItem title="Área de atuação" url="/areas" />
+            <NaveHeaderItem title="Sócios" url="/socios" />
+            <NaveHeaderItem title="Contato" url="/contato" />
+          </div>
+          <div
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-around",
+              justifyContent: "center",
             }}
           >
-            <span>Icone 1</span>
-            <span>Icone 2</span>
-          </div> */}
+            <SocialMediaBallIcon
+              icon="facebook"
+              color={colors.primary}
+              bgColor={colors.white}
+              size={32}
+              style={{ marginLeft: 10, marginRight: 10 }}
+            />
+            <SocialMediaBallIcon
+              icon="instagram"
+              color={colors.primary}
+              bgColor={colors.white}
+              size={32}
+              style={{ marginLeft: 10, marginRight: 10 }}
+            />
+            <SocialMediaBallIcon
+              icon="linkedin"
+              color={colors.primary}
+              bgColor={colors.white}
+              size={32}
+              style={{ marginLeft: 10, marginRight: 10 }}
+            />
+          </div>
         </div>
       </div>
       {visible && <FullBackgroundBlur onClick={() => setVisible(false)} />}
@@ -81,7 +114,7 @@ function ModalnavHeaderUncollapsed({
 export default function NavheaderMobile() {
   const [visible, setVisible] = useState(false);
   return (
-    <>
+    <div>
       <ModalnavHeaderUncollapsed visible={visible} setVisible={setVisible} />
       <header
         style={{
@@ -104,7 +137,7 @@ export default function NavheaderMobile() {
           <Icon name="collapse" width={30} height={30} color={colors.white} />
         </div>
       </header>
-    </>
+    </div>
   );
 }
 
