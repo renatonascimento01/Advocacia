@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {isMobile ? <NavheaderMobile /> : <NavHeaderPC />}
-      <main style={{ minHeight: "75vh" }}>
+      <main style={{ minHeight: "100vh" }}>
         <Component {...pageProps} />
       </main>
       <Footer />
