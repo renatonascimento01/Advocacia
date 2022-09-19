@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import colors from "../styles/colors";
 import { isMobile as nextMobile } from "react-device-detect";
+import Title from "../components/Title";
 
 export default function Socios() {
   const [isMobile, setIsMobile] = useState(false);
@@ -10,25 +11,7 @@ export default function Socios() {
 
   return (
     <div>
-      <div
-        style={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          marginTop: 50,
-          marginBottom: 50,
-        }}
-      >
-        <span
-          style={{
-            fontSize: 60,
-            color: colors.primary,
-            fontWeight: "bold",
-          }}
-        >
-          Sócios
-        </span>
-      </div>
+      <Title>Sócios</Title>
       <div
         style={{
           display: "flex",

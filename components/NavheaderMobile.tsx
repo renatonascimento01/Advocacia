@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import colors from "../styles/colors";
 import Icon from "./Icon";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 function FullBackgroundBlur({ onClick }: { onClick: Function }) {
   return (
     <div
-      onClick={onClick}
+      onClick={() => onClick()}
       style={{
         position: "fixed",
         left: 0,
@@ -48,14 +49,14 @@ function ModalnavHeaderUncollapsed({
             alignItems: "center",
           }}
         >
-          <div>
+          <Link href="/">
             <img
               src="/tmplogo.png"
               width={120}
               height={120}
               style={{ marginTop: 50, marginBottom: 20 }}
             />
-          </div>
+          </Link>
           <NaveHeaderItem title="Home" url="/" />
           <NaveHeaderItem title="Área de atuação" url="/areas" />
           <NaveHeaderItem title="Sócios" url="/socios" />
@@ -96,9 +97,9 @@ export default function NavheaderMobile() {
           zIndex: 10,
         }}
       >
-        <div>
+        <Link href="/">
           <img src="/tmplogo.png" width={60} height={60} />
-        </div>
+        </Link>
         <div onClick={() => setVisible(!visible)}>
           <Icon name="collapse" width={30} height={30} color={colors.white} />
         </div>
