@@ -1,23 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import colors from "../styles/colors";
+import { isMobile as nextMobile } from "react-device-detect";
 
 export default function Socios() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    setIsMobile(nextMobile);
+  }, []);
+
   return (
     <div>
-      <h3 style={{ fontSize: 60, color: colors.primary, textAlign: "center" }}>
-        Socios
-      </h3>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          marginTop: 50,
+          marginBottom: 50,
+        }}
+      >
+        <span
+          style={{
+            fontSize: 60,
+            color: colors.primary,
+            fontWeight: "bold",
+          }}
+        >
+          Sócios
+        </span>
+      </div>
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
           justifyContent: "space-around",
           alignItems: "center",
-          flex: 1
+          flexDirection: isMobile ? "column" : "row",
         }}
       >
         <SocioPreview
-          style={{ flex: 0.5 }}
           name="Amanda Alves"
           image="/amanda_alves.jpg"
           description="
@@ -25,9 +45,9 @@ export default function Socios() {
             federal de pernambuco e atua ná area cívil a 10 anos.
             Trabalhou durante X anos na empresa Y e decidiu se dona
              do seu próprio negócio"
+          isMobile={isMobile}
         ></SocioPreview>
         <SocioPreview
-          style={{ flex: 0.5 }}
           name="Mylaine Ivo"
           image="/mylaine_ivo.png"
           description="
@@ -35,6 +55,7 @@ export default function Socios() {
             de direito militar ajudando pensionistas das forças armadas
             a receberem seus direitos. 
           "
+          isMobile={isMobile}
         ></SocioPreview>
       </div>
     </div>
@@ -45,21 +66,22 @@ function SocioPreview({
   name,
   description,
   image,
-  style,
+  isMobile,
 }: {
   name: string;
   description: string;
   image: string;
-  style: object;
+  isMobile: boolean;
 }) {
   return (
     <div
       style={{
         display: "flex",
-        justifyContent: "center",
         flexDirection: "column",
         alignItems: "center",
-        ...style
+        width: isMobile ? "100%" : "50%",
+        height: 400,
+        marginBottom: isMobile ? 25 : 0,
       }}
     >
       <img src={image} style={{ width: 220, height: 220, borderRadius: 110 }} />
@@ -73,16 +95,16 @@ function SocioPreview({
       >
         {name}
       </span>
-      <div
+      <span
         style={{
-          backgroundColor: "red",
-          paddingLeft: 80,
-          paddingRight: 80,
-          marginTop: 70,
+          marginLeft: 80,
+          marginRight: 80,
+          marginTop: 10,
+          textAlign: "center",
         }}
       >
         {description}
-      </div>
+      </span>
     </div>
   );
 }
