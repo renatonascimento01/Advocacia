@@ -44,7 +44,7 @@ export default function Renato() {
   );
 }
 
-function AreaCard({ title, content }) {
+function AreaCard({ title, content }: { title: string; content: string }) {
   return (
     <div
       style={{
