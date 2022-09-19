@@ -210,7 +210,7 @@ export default function Contact() {
                 />
                 <input
                   type="submit"
-                  value="Send"
+                  value="Enviar"
                   style={textButtonStyle}
                   onMouseEnter={() => setIsMouseHover(true)}
                   onMouseLeave={() => setIsMouseHover(false)}
