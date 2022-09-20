@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Icon from "../components/Icon";
 import colors from "../styles/colors";
+import { isMobile as nextMobile } from "react-device-detect";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    setIsMobile(nextMobile);
+  }, []);
+
   return (
     <div>
       <Carousel showThumbs={false} showArrows={false} dynamicHeight={false}>
         <div>
-          <img src="/c1.webp" height={510} />
+          <img src="/c1.webp" height={isMobile ? 380 : 480} />
         </div>
         <div>
-          <img src="/c2.webp" height={510} />
+          <img src="/c2.webp" height={isMobile ? 380 : 480} />
         </div>
         <div>
-          <img src="/c3.webp" height={510} />
+          <img src="/c3.webp" height={isMobile ? 380 : 480} />
         </div>
       </Carousel>
       <div
@@ -25,8 +31,8 @@ export default function Home() {
           alignItems: "center",
           paddingRight: "15%",
           paddingLeft: "15%",
-          marginTop: "50px",
-          marginBottom: "50px",
+          marginTop: "30px",
+          marginBottom: "30px",
         }}
       >
         <span
