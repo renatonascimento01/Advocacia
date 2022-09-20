@@ -21,6 +21,37 @@ export default function Home() {
       <div
         style={{
           display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          paddingRight: "15%",
+          paddingLeft: "15%",
+          marginTop: "50px",
+          marginBottom: "50px",
+        }}
+      >
+        <span
+          style={{
+            fontSize: 32,
+            fontWeight: "bold",
+            fontFamily: "Times New Roman",
+            color: colors.secondary,
+          }}
+        >
+          QUEM SOMOS
+        </span>
+        <span style={{ textAlign: "center", marginTop: "20px" }}>
+          Lorem ipsum dolor sit amet, consectetur adipisci elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore. Ut enim ad minim
+          veniam, quis nostrum exercitationem ullam corporis suscipit
+          laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.{" "}
+        </span>
+      </div>
+      <div
+        style={{
+          display: "flex",
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",

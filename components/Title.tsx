@@ -21,7 +21,7 @@ export default function Title({
       <span
         style={{
           fontSize: fontSize ? fontSize : 60,
-          color: colors.primary,
+          color: colors.secondary,
           fontWeight: "bold",
         }}
       >
