@@ -10,6 +10,9 @@ import Instagram from "./svgs/instagram.svg";
 import Linkedin from "./svgs/linkedin.svg";
 import BoxLinkedin from "./svgs/boxlinkedin.svg";
 
+import Star from "./svgs/star.svg";
+import HalfStar from "./svgs/star-half-alt.svg";
+
 interface IconProps {
   name: string;
   color: string;
@@ -62,6 +65,10 @@ export default function Icon({
       )}
       {name === "linkedin" && (
         <Linkedin fill={color} width={width} height={height} />
+      )}
+      {name === "star" && <Star fill={color} width={width} height={height} />}
+      {name === "halfstar" && (
+        <HalfStar fill={color} width={width} height={height} />
       )}
     </div>
   );
