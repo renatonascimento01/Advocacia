@@ -7,14 +7,14 @@ export default function NavHeader() {
     <header
       style={{
         width: "100%",
-        height: "80px",
+        height: "85px",
         backgroundColor: colors.primary,
         boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: "0px 20px",
+        padding: "10px 25px",
       }}
     >
       <div>
@@ -44,6 +44,7 @@ function NaveHeaderItem({ title, url }: { title: string; url: string }) {
           router.pathname === url ? colors.terceira : undefined,
         textDecorationThickness: router.pathname === url ? "3px" : undefined,
         fontSize: 18,
+        fontFamily: "Times New Roman", // fonte serifada
       }}
       onMouseEnter={() => {
         setIsMouseOver(true);

@@ -155,6 +155,7 @@ function NaveHeaderItem({ title, url }: { title: string; url: string }) {
         textDecorationThickness: router.pathname === url ? "3px" : undefined,
         fontSize: 22,
         fontWeight: "bold",
+        fontFamily: "Times New Roman", // fonte serifada
       }}
     >
       {title}
