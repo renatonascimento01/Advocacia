@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Footer />
       {loading && (
         <FloatingWhatsApp
-          phone="+5521983095333"
+          phone="+5521983482714"
           popupMessage="Olá, como posso ajudar?"
         />
       )}

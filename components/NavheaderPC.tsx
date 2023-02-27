@@ -18,12 +18,12 @@ export default function NavHeader() {
       }}
     >
       <div>
-        <img src="/tmplogo.png" width={60} height={60} />
+        <img src="/logo.jpeg" width={80} height={80} />
       </div>
       <div>
         <NaveHeaderItem title="Home" url="/" />
         <NaveHeaderItem title="Área de atuação" url="/areas" />
-        <NaveHeaderItem title="Sócios" url="/socios" />
+        <NaveHeaderItem title="Equipe" url="/equipe" />
         <NaveHeaderItem title="Contato" url="/contato" />
       </div>
     </header>
@@ -37,11 +37,13 @@ function NaveHeaderItem({ title, url }: { title: string; url: string }) {
     <a
       href={url}
       style={{
-        color: !isMouseOver ? colors.white : colors.terceira,
+        color: Boolean(!isMouseOver && router.pathname !== url)
+          ? colors.silver
+          : colors.gold,
         margin: "0px 20px",
         textDecoration: router.pathname === url ? "underline" : undefined,
         textDecorationColor:
-          router.pathname === url ? colors.terceira : undefined,
+          router.pathname === url ? colors.gold : colors.silver,
         textDecorationThickness: router.pathname === url ? "3px" : undefined,
         fontSize: 18,
         fontFamily: "Times New Roman", // fonte serifada

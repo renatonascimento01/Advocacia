@@ -15,13 +15,34 @@ export default function Home() {
     <div>
       <Carousel showThumbs={false} showArrows={false} dynamicHeight={false}>
         <div>
-          <img src="/c1.webp" height={isMobile ? 380 : 480} />
+          <img
+            src="/3.jpeg"
+            style={{
+              width: !isMobile ? "50%" : "100%",
+              height: "400px",
+              marginTop: !isMobile ? 20 : 0,
+            }}
+          />
         </div>
         <div>
-          <img src="/c2.webp" height={isMobile ? 380 : 480} />
+          <img
+            src="/2.jpeg"
+            style={{
+              width: !isMobile ? "50%" : "100%",
+              height: "400px",
+              marginTop: !isMobile ? 20 : 0,
+            }}
+          />
         </div>
         <div>
-          <img src="/c3.webp" height={isMobile ? 380 : 480} />
+          <img
+            src="/1.jpeg"
+            style={{
+              width: !isMobile ? "50%" : "100%",
+              height: "400px",
+              marginTop: !isMobile ? 20 : 0,
+            }}
+          />
         </div>
       </Carousel>
       <div
@@ -33,11 +54,12 @@ export default function Home() {
           paddingLeft: "15%",
           marginTop: "30px",
           marginBottom: "30px",
+          textAlign: "center",
         }}
       >
         <span
           style={{
-            fontSize: 32,
+            fontSize: 42,
             fontWeight: "bold",
             fontFamily: "Times New Roman",
             color: colors.secondary,
@@ -45,17 +67,26 @@ export default function Home() {
         >
           QUEM SOMOS
         </span>
-        <span style={{ textAlign: "center", marginTop: "20px" }}>
-          Lorem ipsum dolor sit amet, consectetur adipisci elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore. Ut enim ad minim
-          veniam, quis nostrum exercitationem ullam corporis suscipit
-          laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.{" "}
+        <span
+          style={{
+            textAlign: "center",
+            fontSize: 24,
+            marginTop: "50px",
+            marginBottom: "50px",
+          }}
+        >
+          As sócias resolveram fundar a empresa no ano de 2020. Ambas sempre
+          sonharam em atuar na área de Cessão de Crédito, pois sabem dos altos
+          juros cobrados no ato da contratação de empréstimo bancários.
+          <br />
+          Deram início com apenas 10 funcionários e hoje conta com mais de 80
+          colaboradores. <br />
+          Hoje o maior desafio é fazer crescer cada vez no mercado,
+          proporcionado realizações de sonhos aos seus clientes
+          <br />
         </span>
       </div>
-      <div
+      {/* <div
         style={{
           display: "flex",
           flexDirection: "row",
@@ -100,7 +131,7 @@ export default function Home() {
           stars={4.0}
           message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
         />
-      </div>
+      </div> */}
     </div>
   );
 }
@@ -195,11 +226,11 @@ function FiveStarsRattio({ value }: { value: number }) {
   while (value > 0) {
     if (value >= 1) {
       starsComponent.push(
-        <Icon name="star" color={colors.terceira} width={16} height={16} />
+        <Icon name="star" color={colors.gold} width={16} height={16} />
       );
     } else {
       starsComponent.push(
-        <Icon name="halfstar" color={colors.terceira} width={16} height={16} />
+        <Icon name="halfstar" color={colors.gold} width={16} height={16} />
       );
     }
     value--;

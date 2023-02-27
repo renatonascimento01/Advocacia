@@ -170,7 +170,7 @@ export default function Contact() {
               }}
             >
               {" "}
-              📞 (21)99190-1906 ✉️ contato@ivoealvesadvogados.com.br
+              📞 (21) 98348-2714 ✉️ contato@mbcontabiliza.com.br
             </span>
           </div>
           <div

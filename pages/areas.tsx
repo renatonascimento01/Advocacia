@@ -1,74 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Title from "../components/Title";
 import colors from "../styles/colors";
+import { isMobile as nextMobile } from "react-device-detect";
 
-export default function Renato() {
-  return (
-    <div>
-      <Title fontSize={40}>Áreas de atuação</Title>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}
-      >
-        <AreaCard
-          title="Contencioso"
-          content="Atua na propositura e defesa de todos os tipos de ações, envolvendo diversas áreas do direito, como cível, comercial, responsabilidade civil, tributária e societária."
-        />
-        <AreaCard
-          title="Direito Administrativo e Regulatório"
-          content="Consultoria e auditorias legais, atuação em processos administrativos e judiciais, referentes à concessionárias de serviços públicos, assessoria em licitações e contratações…"
-        />
-        <AreaCard
-          title="Direito do Consumidor"
-          content="Assessoria na resolução de casos envolvendo Direito do Consumidor, tanto para empresas como para pessoas físicas, em litígios de alta complexidade."
-        />
-
-        <AreaCard
-          title="Recuperação Empresarial"
-          content="Assistência em juízo ou extrajudicialmente, representando devedores em procedimentos de Recuperação Judicial ou Extrajudicial…"
-        />
-        <AreaCard
-          title="Direito Ambiental"
-          content="Assessoria em assuntos jurídicos para a obtenção de licenças necessárias em órgãos ambientais para a implementação de projetos que tenham natureza prejudicial ao meio ambiente."
-        />
-        <AreaCard
-          title="Direito Constitucional"
-          content="Elaboração de pareceres sobre projetos de leis, propostas de emendas constitucionais; elaboração de minutas de ação direta de inconstitucionalidade (ADIN)…"
-        />
-      </div>
-    </div>
-  );
-}
-
-function AreaCard({ title, content }: { title: string; content: string }) {
+export default function Areas() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    setIsMobile(nextMobile);
+  }, []);
   return (
     <div
       style={{
-        width: 400,
-        height: 150,
-        margin: 10,
         display: "flex",
-        flexDirection: "column",
+        flexDirection: "row",
+        flexWrap: "wrap",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: isMobile ? "0px 10%" : "0px 20%",
       }}
     >
-      <span
-        style={{
-          textDecoration: "underline",
-          textDecorationColor: colors.primary,
-          textDecorationThickness: "3px",
-          fontSize: 22,
-          fontWeight: "bold",
-          alignSelf: "center",
-        }}
-      >
-        {title}
-      </span>
-      <span style={{ marginTop: 5, fontSize: 16, textAlign: "center" }}>
-        {content}
+      <Title fontSize={40}>CREDITO CONSIGNADO</Title>
+      <span style={{ textAlign: "center" }}>
+        O crédito consignado é a modalidade de empréstimo para pessoa física em
+        que o valor das parcelas é descontado automaticamente, direto no
+        contracheque do salário ou benefício previdenciário (seja da Previdência
+        Social ou de regime próprio de seguridade).
+        <br />
+        <br />
+        Conhecido como uma das linhas de crédito pessoal que apresentam
+        condições mais flexíveis e atrativas (como taxas de juros mais baratas e
+        maiores prazos para pagamento), o crédito consignado é a escolha da
+        maioria dos consumidores em busca de dinheiro extra com o menor custo e
+        sem burocracia.
+        <br />
+        <br />
+        Saiba o que é, como funciona e quais são as principais regras. Garanta o
+        dinheiro extra necessário com as melhores ofertas para o seu bolso.
+        <br />
       </span>
     </div>
   );

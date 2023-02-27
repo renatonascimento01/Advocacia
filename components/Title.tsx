@@ -23,6 +23,7 @@ export default function Title({
           fontSize: fontSize ? fontSize : 60,
           color: colors.secondary,
           fontWeight: "bold",
+          textAlign: "center",
         }}
       >
         {children}

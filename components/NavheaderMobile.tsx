@@ -60,7 +60,7 @@ function ModalnavHeaderUncollapsed({
             }}
           >
             <Link href="/">
-              <img src="/tmplogo.png" width={120} height={120} />
+              <img src="/logo.jpeg" width={120} height={120} />
             </Link>
           </div>
           <div
@@ -72,7 +72,7 @@ function ModalnavHeaderUncollapsed({
           >
             <NaveHeaderItem title="Home" url="/" />
             <NaveHeaderItem title="Área de atuação" url="/areas" />
-            <NaveHeaderItem title="Sócios" url="/socios" />
+            <NaveHeaderItem title="Equipe" url="/equipe" />
             <NaveHeaderItem title="Contato" url="/contato" />
           </div>
           <div
@@ -130,9 +130,11 @@ export default function NavheaderMobile() {
           zIndex: 10,
         }}
       >
-        <Link href="/">
-          <img src="/tmplogo.png" width={60} height={60} />
-        </Link>
+        <div>
+          <Link href="/">
+            <img src="/logo.jpeg" width={60} height={60} />
+          </Link>
+        </div>
         <div onClick={() => setVisible(!visible)}>
           <Icon name="collapse" width={30} height={30} color={colors.white} />
         </div>

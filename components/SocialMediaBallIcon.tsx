@@ -9,16 +9,18 @@ export default function SocialMediaBallIcon({
   bgColor,
   size,
   style,
+  linkUrl,
 }: {
   icon: "instagram" | "facebook" | "linkedin";
   color: string;
   bgColor: string;
   size: number;
   style?: object;
+  linkUrl: string;
 }) {
   const [isMouseOver, setIsMouseOver] = useState(false);
   return (
-    <Link href="https://facebook.com/">
+    <Link href={String(linkUrl)}>
       <div
         style={{
           width: size * 2,
@@ -40,7 +42,7 @@ export default function SocialMediaBallIcon({
       >
         <Icon
           name={icon}
-          color={isMouseOver ? colors.terceira : color}
+          color={isMouseOver ? colors.gold : color}
           width={size / 2 + size / 2 / 2}
           height={size / 2 + size / 2 / 2}
         />

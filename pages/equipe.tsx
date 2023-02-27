@@ -11,7 +11,19 @@ export default function Socios() {
 
   return (
     <div>
-      <Title>Sócios</Title>
+      <div
+        style={{
+          display: "flex",
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+          height: "100vh",
+        }}
+      >
+        <Title>Página em construção...</Title>
+      </div>
+      {/* <Title>Equipe</Title>
       <div
         style={{
           display: "flex",
@@ -40,7 +52,7 @@ export default function Socios() {
           "
           isMobile={isMobile}
         ></SocioPreview>
-      </div>
+      </div> */}
     </div>
   );
 }
