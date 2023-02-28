@@ -1,105 +1,166 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import colors from "../styles/colors";
-import { isMobile as nextMobile } from "react-device-detect";
-import Title from "../components/Title";
+import Icon from "../components/Icon";
 
 export default function Socios() {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    setIsMobile(nextMobile);
-  }, []);
-
   return (
     <div>
       <div
         style={{
           display: "flex",
-          flex: 1,
+          flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",
-          width: "100%",
-          height: "100vh",
+          flexWrap: "wrap",
         }}
       >
-        <Title>Página em construção...</Title>
+        <ReviewCard
+          img="/tiago.png"
+          nome="Tiago Duarte"
+          stars={5.0}
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        />
+        <ReviewCard
+          img="/tiago.png"
+          nome="Tiago Duarte"
+          stars={5.0}
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        />
+        <ReviewCard
+          img="/tiago.png"
+          nome="Tiago Duarte"
+          stars={4.5}
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        />
+        <ReviewCard
+          img="/tiago.png"
+          nome="Tiago Duarte"
+          stars={4.5}
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        />
+        <ReviewCard
+          img="/tiago.png"
+          nome="Tiago Duarte"
+          stars={4.5}
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        />
+        <ReviewCard
+          img="/tiago.png"
+          nome="Tiago Duarte"
+          stars={4.0}
+          message="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        />
       </div>
-      {/* <Title>Equipe</Title>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          flexDirection: isMobile ? "column" : "row",
-        }}
-      >
-        <SocioPreview
-          name="Amanda Alves"
-          image="/amanda_alves.jpg"
-          description="
-            Amanda Alves é advogada formada na universadade 
-            federal de pernambuco e atua ná area cívil a 10 anos.
-            Trabalhou durante X anos na empresa Y e decidiu se dona
-             do seu próprio negócio"
-          isMobile={isMobile}
-        ></SocioPreview>
-        <SocioPreview
-          name="Mylaine Ivo"
-          image="/mylaine_ivo.png"
-          description="
-            Mylaine Ivo é advogada a 12 anos e atua na área
-            de direito militar ajudando pensionistas das forças armadas
-            a receberem seus direitos. 
-          "
-          isMobile={isMobile}
-        ></SocioPreview>
-      </div> */}
     </div>
   );
 }
 
-function SocioPreview({
-  name,
-  description,
-  image,
-  isMobile,
+function ReviewCard({
+  img,
+  stars,
+  nome,
+  message,
 }: {
-  name: string;
-  description: string;
-  image: string;
-  isMobile: boolean;
+  img: string;
+  stars: number;
+  nome: string;
+  message: string;
 }) {
+  const boxWidth = 350;
+  const boxHeight = 350;
   return (
     <div
       style={{
+        backgroundColor: "#FFF",
+        width: boxWidth,
+        height: boxHeight,
         display: "flex",
-        flexDirection: "column",
         alignItems: "center",
-        width: isMobile ? "100%" : "50%",
-        height: 400,
-        marginBottom: isMobile ? 25 : 0,
+        justifyContent: "center",
+        margin: "10px 10px",
+        borderWidth: 1,
+        borderColor: "#CFCFCF",
+        borderStyle: "solid",
+        boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+        paddingTop: 105,
       }}
     >
-      <img src={image} style={{ width: 220, height: 220, borderRadius: 110 }} />
-      <span
+      {/* avatar */}
+      <div
         style={{
-          marginTop: 15,
-          color: colors.primary,
-          fontSize: 25,
-          fontWeight: "bold",
+          width: 150,
+          height: 150,
+          borderRadius: 75,
+          overflow: "hidden",
+          borderWidth: 10,
+          borderColor: "#FFF",
+          borderStyle: "solid",
+          position: "absolute",
+          marginBottom: 300,
+          backgroundColor: "#000",
         }}
       >
-        {name}
-      </span>
-      <span
+        <img
+          src={img}
+          style={{ width: 150, height: 150, objectPosition: "5px 8px" }}
+        />
+      </div>
+      <div
         style={{
-          marginLeft: 80,
-          marginRight: 80,
-          marginTop: 10,
-          textAlign: "center",
+          width: boxWidth - 25,
+          height: boxHeight - 120,
+          backgroundColor: "#383838",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          paddingTop: 50,
         }}
       >
-        {description}
-      </span>
+        <span
+          style={{
+            fontSize: 32,
+            fontWeight: "bold",
+            color: "#FFFFFF",
+            marginTop: 5,
+          }}
+        >
+          {nome}
+        </span>
+        {/* <div style={{ display: "flex", flexDirection: "row" }}>
+          <FiveStarsRattio value={stars} />
+        </div> */}
+        <span
+          style={{
+            fontSize: 16,
+            color: "#FFFFFF",
+            textAlign: "center",
+            marginTop: 10,
+          }}
+        >
+          {message}
+        </span>
+      </div>
+    </div>
+  );
+}
+
+function FiveStarsRattio({ value }: { value: number }) {
+  const starsComponent = [];
+  while (value > 0) {
+    if (value >= 1) {
+      starsComponent.push(
+        <Icon name="star" color={colors.gold} width={16} height={16} />
+      );
+    } else {
+      starsComponent.push(
+        <Icon name="halfstar" color={colors.gold} width={16} height={16} />
+      );
+    }
+    value--;
+  }
+  return (
+    <div style={{ display: "flex", flexDirection: "row" }}>
+      {starsComponent}
     </div>
   );
 }

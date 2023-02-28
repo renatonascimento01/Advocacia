@@ -10,6 +10,8 @@ import Instagram from "./svgs/instagram.svg";
 import Linkedin from "./svgs/linkedin.svg";
 import BoxLinkedin from "./svgs/boxlinkedin.svg";
 
+import HandHoldingDollar from "./svgs/hand-holding-dollar.svg";
+
 import Star from "./svgs/star.svg";
 import HalfStar from "./svgs/star-half-alt.svg";
 
@@ -69,6 +71,9 @@ export default function Icon({
       {name === "star" && <Star fill={color} width={width} height={height} />}
       {name === "halfstar" && (
         <HalfStar fill={color} width={width} height={height} />
+      )}
+      {name === "hand-holding-dollar" && (
+        <HandHoldingDollar fill={color} width={width} height={height} />
       )}
     </div>
   );

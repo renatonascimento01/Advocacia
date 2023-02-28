@@ -47,8 +47,8 @@ export default function Contact() {
     transition: "background-color 300ms linear",
     color: colors.white,
   };
-  const form = useRef();
-  const sendEmail = (e) => {
+  const form: any = useRef();
+  const sendEmail = (e: any) => {
     e.preventDefault();
 
     emailjs
@@ -170,7 +170,7 @@ export default function Contact() {
               }}
             >
               {" "}
-              📞 (21) 98348-2714 ✉️ contato@mbcontabiliza.com.br
+              📞 (21) 98348-2714 ✉️ idealacessoria@gmail.com
             </span>
           </div>
           <div
@@ -207,6 +207,7 @@ export default function Contact() {
                   name="message"
                   style={textareaInputStyle}
                   placeholder="mensagem"
+                  rows={12}
                 />
                 <input
                   type="submit"

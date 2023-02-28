@@ -83,25 +83,12 @@ function ModalnavHeaderUncollapsed({
             }}
           >
             <SocialMediaBallIcon
-              icon="facebook"
-              color={colors.primary}
-              bgColor={colors.white}
-              size={32}
-              style={{ marginLeft: 10, marginRight: 10 }}
-            />
-            <SocialMediaBallIcon
               icon="instagram"
               color={colors.primary}
               bgColor={colors.white}
               size={32}
               style={{ marginLeft: 10, marginRight: 10 }}
-            />
-            <SocialMediaBallIcon
-              icon="linkedin"
-              color={colors.primary}
-              bgColor={colors.white}
-              size={32}
-              style={{ marginLeft: 10, marginRight: 10 }}
+              linkUrl="https://www.instagram.com/mbrentabiliza/?igshid=NjY2NjE5MzQ%3D"
             />
           </div>
         </div>
