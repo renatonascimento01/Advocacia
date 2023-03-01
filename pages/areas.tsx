@@ -13,10 +13,7 @@ export default function Areas() {
     <div
       style={{
         display: "flex",
-        flexDirection: "row",
-        flexWrap: "wrap",
-        alignItems: "center",
-        justifyContent: "center",
+        flexDirection: "column",
 
         padding: isMobile ? "0px 5%" : "0px 5%",
         margin: !isMobile ? "15px 15%" : "15px 3%",
@@ -36,24 +33,37 @@ export default function Areas() {
         height={64}
         style={{ paddingTop: 30 }}
       />
-      <Title fontSize={40}>CREDITO CONSIGNADO</Title>
+      <Title fontSize={40} style={{ marginTop: 30, marginBottom: 30 }}>
+        CESSÃO DE CREDITO
+      </Title>
+      <Title fontSize={20} style={{ marginTop: 30, marginBottom: 30 }}>
+        O QUE FAZEMOS?
+      </Title>
       <span style={{ textAlign: "center" }}>
-        O crédito consignado é a modalidade de empréstimo para pessoa física em
-        que o valor das parcelas é descontado automaticamente, direto no
-        contracheque do salário ou benefício previdenciário (seja da Previdência
-        Social ou de regime próprio de seguridade).
+        A MB Rentabiliza oferece a solução financeira para a vida desses
+        clientes que possuem parcelas que é descontada diretamente no
+        contracheque, holerite ou beneficio. Liberando desconto nas parcelas
+        ativas ou quitação de consignado, diminuindo a taxa de juros, assumindo
+        parcelas e até mesmo aplicando um bom investimento utilizando a margem
+        consignável sem que o mesmo precise dispor de qualquer valor do próprio
+        bolso.
+      </span>
+      <Title fontSize={20} style={{ marginTop: 30, marginBottom: 30 }}>
+        COMO FUNCIONA?
+      </Title>
+      <span style={{ textAlign: "center" }}>
+        A MB Rentabiliza trabalhar de maneira clara, obvia e transparente
+        aplicando de forma legal a cessão de crédito que funciona da seguinte
+        maneira: Primeiramente é celebrado o negócio jurídico através de
+        instrumento particular(contrato) ou público(escritura), com a
+        recomendação de que o público seja usado quando for necessário uma maior
+        formalidade ao negócio jurídico.
         <br />
+        Entramos em contato com o cliente para entender a melhor maneira de
+        ajuda-lo e em seguida realizar a transação de acordo online.
         <br />
-        Conhecido como uma das linhas de crédito pessoal que apresentam
-        condições mais flexíveis e atrativas (como taxas de juros mais baratas e
-        maiores prazos para pagamento), o crédito consignado é a escolha da
-        maioria dos consumidores em busca de dinheiro extra com o menor custo e
-        sem burocracia.
-        <br />
-        <br />
-        Saiba o que é, como funciona e quais são as principais regras. Garanta o
-        dinheiro extra necessário com as melhores ofertas para o seu bolso.
-        <br />
+        Precisamos mantes esse cliente até o final de sua negociação bem
+        informado e ciente de todo o tramite efetuado.
       </span>
     </div>
   );

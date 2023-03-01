@@ -4,9 +4,11 @@ import colors from "../styles/colors";
 export default function Title({
   children,
   fontSize,
+  style,
 }: {
   children: string;
   fontSize?: number;
+  style?: object;
 }) {
   return (
     <div
@@ -16,6 +18,7 @@ export default function Title({
         justifyContent: "center",
         marginTop: 50,
         marginBottom: 50,
+        ...style,
       }}
     >
       <span

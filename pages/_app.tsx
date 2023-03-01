@@ -36,9 +36,12 @@ function MyApp({ Component, pageProps }: AppProps) {
           minHeight: "100vh",
           width: "100vw",
           backgroundColor: colors.terceira,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
         }}
       >
-        {isMobile ? <NavheaderMobile /> : <NavHeaderPC />}
+        <>{isMobile ? <NavheaderMobile /> : <NavHeaderPC />}</>
         <Component {...pageProps} />
         <Footer />
       </main>

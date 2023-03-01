@@ -46,8 +46,8 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          paddingRight: "15%",
-          paddingLeft: "15%",
+          paddingRight: "10%",
+          paddingLeft: "10%",
           marginTop: "30px",
           marginBottom: "30px",
           textAlign: "center",
@@ -66,7 +66,7 @@ export default function Home() {
             fontWeight: "bold",
             fontFamily: "Times New Roman",
             color: colors.secondary,
-            paddingTop: 50,
+            marginTop: 50,
           }}
         >
           QUEM SOMOS
@@ -75,10 +75,13 @@ export default function Home() {
           style={{
             textAlign: "center",
             fontSize: 24,
-            marginTop: "50px",
-            marginBottom: "50px",
+            marginTop: "25px",
+            marginBottom: "25px",
           }}
         >
+          Somos uma empresa que atua no Mercado Financeiro, mais especificamente
+          na área de Cessão de Crédito.
+          <br />
           As sócias resolveram fundar a empresa no ano de 2020. Ambas sempre
           sonharam em atuar na área de Cessão de Crédito, pois sabem dos altos
           juros cobrados no ato da contratação de empréstimo bancários.
@@ -88,6 +91,90 @@ export default function Home() {
           Hoje o maior desafio é fazer crescer cada vez no mercado,
           proporcionado realizações de sonhos aos seus clientes
           <br />
+          A empresa atua no mercado há mais de três anos, proporcionando aos
+          seus clientes a oportunidade de terem seus empréstimos consignados
+          reduzidos, e assim, retomar a sua saúde financeira.
+          <br />A empresa atua com transparência, respondendo a todos os seus
+          clientes através dos canais de comunicação atuando com
+          responsabilidade, ética e com foco no seu principal objetivo.
+          <br />
+        </span>
+        <span
+          style={{
+            fontSize: 42,
+            fontWeight: "bold",
+            fontFamily: "Times New Roman",
+            color: colors.secondary,
+            marginTop: 15,
+          }}
+        >
+          MISSÃO
+        </span>
+        <span
+          style={{
+            textAlign: "center",
+            fontSize: 24,
+            marginTop: "25px",
+            marginBottom: "25px",
+          }}
+        >
+          Gerar soluções financeiras para seus clientes, por meio do
+          cooperativismo, tendo como finalidade a recuperação e organização de
+          suas finanças.
+        </span>
+        <span
+          style={{
+            fontSize: 42,
+            fontWeight: "bold",
+            fontFamily: "Times New Roman",
+            color: colors.secondary,
+            marginTop: 15,
+          }}
+        >
+          VISÃO
+        </span>
+        <span
+          style={{
+            textAlign: "center",
+            fontSize: 24,
+            marginTop: "25px",
+            marginBottom: "25px",
+          }}
+        >
+          Ser reconhecida como a principal empresa que reduz e resgata a vida
+          financeira de seus clientes proporcionando uma vida monetária
+          saudável.
+        </span>
+        <span
+          style={{
+            fontSize: 42,
+            fontWeight: "bold",
+            fontFamily: "Times New Roman",
+            color: colors.secondary,
+            marginTop: 15,
+          }}
+        >
+          VALORES:
+        </span>
+        <span
+          style={{
+            textAlign: "center",
+            fontSize: 24,
+            marginTop: "25px",
+            marginBottom: "25px",
+          }}
+        >
+          Transparência
+          <br />
+          Ética
+          <br />
+          Respeito
+          <br />
+          Comprometimento
+          <br />
+          Solidariedade
+          <br />
+          Responsabilidade
         </span>
       </div>
     </div>
